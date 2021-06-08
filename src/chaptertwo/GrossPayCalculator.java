@@ -7,15 +7,19 @@ public class GrossPayCalculator {
     public static void main(String arg []){
         Scanner scanner = new Scanner(System.in);
         GrossPayCalculator grossPayCalculator = new GrossPayCalculator();
-         //* Get the number of hours worked
+
         int numberOfHours = grossPayCalculator.getNumberOfHours(scanner);
-        //* Get the hourly pay rate
         double rate = grossPayCalculator.getRate(scanner);
-        //* Multiple hours and pay rate
         grossPayCalculator.calculateSalary(scanner, numberOfHours, rate);
 
     }
 
+    /**
+     * Calculates Salary
+     * @param scanner
+     * @param numberOfHours
+     * @param rate
+     */
     private void calculateSalary(Scanner scanner, int numberOfHours, double rate) {
 
         double salary = numberOfHours * rate;
@@ -28,10 +32,14 @@ public class GrossPayCalculator {
         }
 
         scanner.close();
-        //* Display result
         System.out.println("You salary is = " + salary + "$");
     }
 
+    /**
+     * Gets the number of hours
+     * @param scanner
+     * @return int
+     */
     private int getNumberOfHours(Scanner scanner) {
         System.out.println("Enter the number of hours the employee worked");
         int numberOfHours = scanner.nextInt();
@@ -43,6 +51,11 @@ public class GrossPayCalculator {
         return numberOfHours;
     }
 
+    /**
+     * Gets the pay rate
+     * @param scanner
+     * @return double
+     */
     private double getRate(Scanner scanner) {
         System.out.println("Enter the employee's pay rate");
         double rate = scanner.nextDouble();
