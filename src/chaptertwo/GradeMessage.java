@@ -1,6 +1,5 @@
 package chaptertwo;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -49,13 +48,5 @@ public class GradeMessage {
         }
 
         System.out.println(message);
-    }
-
-    public enum Grades{
-        A,
-        B,
-        C,
-        D,
-        F
     }
 }
