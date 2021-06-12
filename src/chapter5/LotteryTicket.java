@@ -26,7 +26,6 @@ public class LotteryTicket {
     public int [] generateNumber(int length){
         int [] ticket = new int[length];
 
-
         Random random = new Random();
         int randomNumber;
         for (int num = 0; num < ticket.length; num++) {
