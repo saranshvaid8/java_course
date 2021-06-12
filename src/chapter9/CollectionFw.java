@@ -38,6 +38,7 @@ public class CollectionFw {
 
         for (var entry: fruitPrice.entrySet()){
             System.out.println("Printing using forEach "+ entry);
+
         }
 
     }
